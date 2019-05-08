@@ -1,0 +1,56 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" style="width:270px; height: 135px; padding: 0px 0px;">
+  <head>
+    <title>翻轉 google </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      .myButton {
+        -moz-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+        -webkit-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+        box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+        background-color:#79bbff;
+        -moz-border-radius:6px;
+        -webkit-border-radius:6px;
+        border-radius:6px;
+        border:1px solid #84bbf3;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Microsoft JhengHei;
+        font-size:15px;
+        font-weight:bold;
+        padding:6px 24px;
+        text-decoration:none;
+        text-shadow:0px 1px 0px #528ecc;
+      }
+      .myButton:hover {
+        background-color:#378de5;
+      }
+      .myButton:active {
+        position:relative;
+        top:1px;
+      }
+      #set:hover{
+        transform: scale(1.1);
+      }
+
+    </style>
+  </head>
+
+  <body id="body" style="display: block; padding: 0px 0px; margin: 0px 0px 0px 0px; ">
+    <header style="background-color: #81ecec; padding: 0px 0px; height: 25px; text-align:center; line-height:25px; size: 15px; font-weight: bolder;">
+      NUTN Ecourse 輸入成績小幫手
+    </header>
+    <div class="container-block" style="margin: 15px 15px 15px 15px;">
+      <button id="fill" class="myButton" >填入成績</button>
+      <!-- <button id="set" style="float: right;"><img src="excel_upload.png" style="width: 35px; height: 35px;"></button> -->
+      <img src="excel_upload.png" style="float:right; width: 35px; height: 35px;" id="set">
+    </div>
+    <footer style="background-color: #dfe6e9; padding: 0px 0px; height: 48px; text-align:center; line-height:24px; size: 15px;">
+      Copyright © 2019 <strong>DS Lab</strong>資料系統實驗室<br />
+      <a href="https://hackmd.io/s/r1SzZOlhN" target="_blank">使用說明</a>
+    </footer>
+    <script src="popup.js"></script>
+  </body>
+</html>

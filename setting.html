@@ -1,0 +1,82 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>匯入xlsx</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      .myButton {
+        -moz-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+        -webkit-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+        box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+        background-color:#79bbff;
+        -moz-border-radius:6px;
+        -webkit-border-radius:6px;
+        border-radius:6px;
+        border:1px solid #84bbf3;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Microsoft JhengHei;
+        font-size:15px;
+        font-weight:bold;
+        padding:6px 24px;
+        text-decoration:none;
+        text-shadow:0px 1px 0px #528ecc;
+      }
+      .myButton:hover {
+        background-color:#378de5;
+      }
+      .myButton:active {
+        position:relative;
+        top:1px;
+      }
+      .scoreATTR {
+        background-color: #ffcce6;
+      }
+      .commentATTR {
+        background-color: #70db70;
+      }
+      body{
+        font-family: 'Microsoft JhengHei';
+      }
+
+    </style>
+  </head>
+
+  <body id="body">
+    
+    <input type="file" id="input-xlsx" style="font-size: 18px;">
+    <button id="submit" class="myButton">送出</button>
+    <br />
+    <br />
+    <div id="config-block">
+      <label for="sheet" style="font-size: 18px;">工作表：</label>
+      <select id="sheet" style="font-size: 18px;">
+        <option value="-1">請選擇工作表名稱：</option>
+      </select><br /><br />
+      <label for="score-attribute" class="scoreATTR" style="font-size: 18px;">成績欄位名稱：</label>
+      <select id="score-attribute" style="font-size: 18px;">
+        <option value="-1">請選擇欄位</option>
+      </select><br /><br />
+      <label for="comment-attribute" class="commentATTR" style="font-size: 18px;">評語名稱：</label>
+      <select id="comment-attribute" style="font-size: 18px;">
+        <option value="-1">請選擇欄位</option>
+      </select>
+    </div>
+    <br /><br />
+    <div id="xlsx-content">
+      <table id="data" style="border:3px #cccccc solid; font-size: 14px;" cellpadding="8" border='1'>
+      </table>
+    </div>
+    <!--使用jQuery操作dom-->
+    <script type="text/javascript" src="jquery.min.js"></script>
+
+    <!--使用JS-XLSX操作xlsx-->
+    <script type="text/javascript" src="js/xlsx.full.min.js"></script>
+
+    <!--使用FileSaver下載資料成為檔案-->
+    <script type="text/javascript" src="js/FileSaver.min.js"></script>
+    <script type="text/javascript" src="js/setting.js"></script>
+  </body>
+</html>
